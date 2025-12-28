@@ -1,0 +1,18 @@
+:root {
+    /* Цвета */
+
+    /* Градиенты */
+
+    /* Тени */
+    --top-box-shadow: 0 -20px 20px -20px rgba(0, 0, 0, 0.3);
+    --right-box-shadow: 20px 0 20px -20px rgba(0, 0, 0, 0.2);
+    --bottom-box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.2);
+
+    /* Радиусы */
+    --border-radius: 16px;
+    --two-border-radius: 32px;
+
+    /*  Отступы  */
+    --section-padding: 10vh 6vw;
+    --max-width: 3440px;
+}

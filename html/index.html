@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="all">
+    <meta name="description" content="">
+    <title>JSON Тестирование</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1 class="title-text mt-4">Генератор карточек для обучения</h1>
+
+    <div class="filter-buttons">
+        <button class="filter-btn" data-json="physics-teormin-1">Физика теормин 1</button>
+        <button class="filter-btn" data-json="physics-teormin-2">Физика теормин 2</button>
+        <button class="filter-btn" data-json="physics-teormin-1 physics-teormin-2">Физика оба теормина</button>
+    </div>
+
+    <!-- Секция ввода данных -->
+    <section class="input-section">
+        <textarea class="mt-2" id="jsonInput" placeholder='Введите JSON в формате:
+            [
+              {
+                "question": "Ваш вопрос 1",
+                "answer": "Ваш ответ 1"
+              },
+              {
+                "question": "Ваш вопрос 2",
+                "answer": "Ваш ответ 2"
+              }
+            ]
+            ' rows="10"></textarea>
+        <button id="loadDataBtn">Загрузить данные</button>
+        <p id="statusMessage" class="hidden"></p>
+    </section>
+
+    <!-- Секция настроек вывода -->
+    <section class="settings-section hidden mt-4" id="settingsSection">
+        <h2 class="title-text">Настройки вывода</h2>
+
+        <div class="settings-container mt-4">
+            <input class="check-input" type="radio" id="modeRandom" name="mode" value="random" checked>
+            <label for="modeRandom">Случайный вопрос</label>
+        </div>
+
+        <div class="settings-container mt-2">
+            <input class="check-input" type="radio" id="modeCount" name="mode" value="count">
+            <label for="modeCount">Задать количество:</label>
+            <input class="number-label" type="number" id="countInput" value="3" min="1" disabled>
+        </div>
+
+        <button class="mt-4" id="generateBtn">Сгенерировать карточки</button>
+    </section>
+
+    <!-- Секция вывода результатов -->
+    <section class="output-section">
+        <h2 class="title-text mt-4">Карточки</h2>
+        <div id="cardsContainer"></div>
+    </section>
+</div>
+
+<script src="../js/index.js"></script>
+</body>
+</html>
